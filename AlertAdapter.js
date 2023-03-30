@@ -1,8 +1,7 @@
-import React, { Platform } from "react-native";
-let { Alert } = React;
+import { Alert, Platform, NativeModules } from "react-native";
 
 if (Platform.OS === "android") {
-  const { NativeModules: { CodePushDialog } } = React;
+  const { CodePushDialog } = NativeModules;
     
   Alert = {
     alert(title, message, buttons) {
